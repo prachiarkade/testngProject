@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseClass {
 	
@@ -40,8 +41,14 @@ public class BaseClass {
 		System.out.println("Please enter valis browser name");
 	}
 		
+		}
 		
+	@BeforeMethod	
+	public void launch() throws IOException {
 		
+      browserIntialization();
+		
+	  driver.get("https://login.salesforce.com/?locale=in");
 		
 		
 		

@@ -18,6 +18,8 @@ public class LogInPageObject {
 	
 	private By tryforfree = By.xpath("//a[@id='signup_link']");
 	
+	private By ErrorMessage = By.xpath("//div[@id='error']");
+	
 	
 	public LogInPageObject(WebDriver driver2) {
 		
@@ -50,7 +52,10 @@ public class LogInPageObject {
 	}
 	
 	
-	
+	public WebElement ErrorMessage() {
+		
+		return driver.findElement(ErrorMessage);
+	}
 	
 	
 	
